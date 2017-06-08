@@ -3,3 +3,4 @@ src
 *.iml
 WEB-INF
 *.rar
+!/HTML&CSS/lesson_05/cssClasses.html

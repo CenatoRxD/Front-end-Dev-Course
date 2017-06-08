@@ -1,0 +1,40 @@
+.header{
+    width: 1000px;
+    height: 100px;
+    clear: both;
+    background-color: red;
+}
+
+.header:hover{
+    width: 1000px;
+    height: 100px;
+    clear: both;
+    background-color: blue;
+}
+
+.menu{
+    width: 200px;
+    height: 700px;
+    float: left;
+    background-color: aqua;
+}
+
+.content{
+    width: 1000px;
+    height: 700px;
+    background-color: darkcyan;
+}
+
+.footer{
+    width: 1000px;
+    height: 100px;
+    background-color: black;
+    color: aliceblue
+}
+
+.footer:hover{
+    width: 1000px;
+    height: 100px;
+    background-color: yellow;
+    color: aliceblue
+}
