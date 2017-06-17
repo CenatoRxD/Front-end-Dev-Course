@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<pre>
+<h2>Part 1</h2>
+    <script>
+        var x = 6;
+        var y = 15;
+        var z = 4;
+        document.writeln("First result");
+        document.writeln("x += y - x++ * z = " + (x += y - x++ * z));
+    </script>
+</pre>
+<pre>
+    <script>
+        document.writeln("Second result");
+        var x = 6;
+        var y = 15;
+        var z = 4;
+
+        document.writeln("z = -- x - y * 5 = " + (z = --x - y * 5));
+    </script>
+</pre>
+<pre>
+    <script>
+        document.writeln("Third result");
+        var x = 6;
+        var y = 15;
+        var z = 4;
+
+        document.writeln("y /= x + 5 % z = " + parseInt(y /= x + 5 % z));
+    </script>
+</pre>
+<pre>
+    <script>
+        document.writeln("Fourth result");
+        var x = 6;
+        var y = 15;
+        var z = 4;
+
+        document.writeln("z = x++ + y * 5 = " + (z = x++ + y * 5));
+    </script>
+</pre>
+<pre>
+    <script>
+        document.writeln("Fifth result");
+        var x = 6;
+        var y = 15;
+        var z = 4;
+
+        document.writeln("x = y - x++ * z = " + (x = y - x++ * z ));
+    </script>
+</pre>
+<pre>
+<h2>Part 2</h2>
+    <script>
+        var result = 0;
+        var n = +prompt("Среднее арифметическое для n-чисел");
+        for (var i = 1; i <= n; i++) {
+            result += +prompt("Введите число" + i, "for ex. : 123");
+        }
+
+        document.writeln("Average value is: " + result / n);
+    </script>
+</pre>
+
+<pre>
+<h2>Part 3</h2>
+    <script>
+        var h = 5;
+        var r = 2;
+        var volume = Math.PI * Math.pow(r, 2) * h;
+        var area = 2 * Math.PI * r * h + 2 * Math.PI * Math.pow(r, 2);
+
+        document.writeln("Cylinder volume is: " + volume);
+        document.writeln("Cylinder volume is: " + area);
+    </script>
+</pre>
+
+</body>
+</html>
