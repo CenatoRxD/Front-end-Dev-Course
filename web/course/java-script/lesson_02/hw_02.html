@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Sum of all/uneven elements</h2>
+<script>
+    var sum = 0;
+    var a = +prompt("Enter A:", "0123");
+    var b = +prompt("Enter B which lower A:", "0123");
+
+    for (var i = a; i < b; i++) {
+        sum += i;
+    }
+
+    document.writeln("Sum = " + sum + "<br/>");
+
+    var oddElements = " ";
+    for (var j = a; j < b; j++) {
+        if (j % 2 !== 0) {
+            oddElements = oddElements + " " + j;
+        }
+    }
+    document.writeln("All uneven elements = " + oddElements + "<be/>");
+</script>
+
+<h2>Factorial</h2>
+
+<script>
+    var fact = 1;
+    var a = prompt("For what value are you want to calculate factorials?");
+
+    do {
+        if (a === 0) {
+            fact = 1;
+            break;
+        }
+        fact = fact * a--;
+    } while (a !== 1);
+    document.write("<br/>Factorial = " + fact + "<br/>")
+</script>
+<pre>
+<h2>Shape(Triangle)</h2>
+
+<script>
+    var a = +prompt("Enter first number");
+    var b = +prompt("Enter second number");
+
+    for (var i = 1; i <= a; i++) {
+        for (var j = 1; j <= i; j++) {
+            if ((i === 1 || i === a) || ((i > 0 || i < a) && (j === 1 || j === i))) {
+                document.write("*");
+            } else {
+                document.write('&nbsp');
+            }
+        }
+        document.writeln("<br/>");
+    }
+</script>
+
+<h2>Shape(Rectangle)</h2>
+
+<script>
+    var a = +prompt("Enter first number");
+    var b = +prompt("Enter second number");
+
+    for (var i = 1; i <= a; i++) {
+        for (var j = 1; j <= b; j++) {
+            if ((i === 1 || i === a) || ((i > 1 || i < a) && (j === 1 || j === b))) {
+                document.write("*");
+            } else {
+                document.write(" ");
+            }
+        }
+        document.writeln("<br/>");
+    }
+</script>
+
+    <h2>Shape(Triangle )</h2>
+
+<script>
+    var a = +prompt("Enter first number");
+    var b = +prompt("Enter second number");
+
+    for (var i = 0, k = 0; i < a; i++ , k++) {
+        for (var j = 0; j < 2 * b; j++) {
+            if ((i === 0 && j === a) ||
+                ((i > 0 || i < a ) && (j === a - k) || (j === a + k)) || (i === a - 1 && j > 0)) {
+                document.write("*");
+            } else {
+                document.write("&nbsp");
+            }
+        }
+        document.writeln("");
+    }
+</script>
+
+<h2>Shape(Rhombus)</h2>
+<script>
+    var a = +prompt("Enter first number");
+    var b = +prompt("Enter second number");
+    var height = 2 * a;
+    var width = 2 * b;
+
+    for (var i = 0, k = 0; i <= height; i++ , k++) {
+        for (var j = 0; j <= width; j++) {
+            if (i <= a) {
+                if ((i === 0 && j === a) ||
+                    ((i > 0 || i < a ) && ((j === a - k) || (j === a + k)))) {
+                    document.write("*");
+                } else {
+                    document.write("&nbsp");
+                }
+            } else {
+                if ((i === width && j === a) ||
+                    ((i > a || i < width)) && (j === a + i - width) || (j === a + width - i)) {
+                    document.write("*");
+                } else {
+                    document.write("&nbsp");
+                }
+            }
+        }
+        document.writeln("");
+    }
+</script>
+</pre>
+</body>
+</html>

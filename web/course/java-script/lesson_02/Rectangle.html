@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<pre>
+<script>
+    var a = +prompt("Enter first number");
+    var b = +prompt("Enter second number");
+
+    for (var i = 0; i <= a; i++) {
+        for (var j = 0; j <= i; j++) {
+            if((i === 0 || i === a) || ((i > 0 || i < a) && (j === 0 || j === i))){
+                document.write("*");
+            }else{
+                document.write(" ");
+            }
+        }
+        document.writeln("");
+    }
+</script>
+</pre>
+</body>
+</html>
