@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var sum = 0;
+    var arr = new Array(10);
+
+    for (var i = 0; i < arr.length; i++) {
+        arr[i] = parseInt(Math.random() * 10 + 1);
+    }
+
+    document.write(arr.reverse().join(" ") + "<br/>");
+    document.write(arr.reverse().join(" ") + "<br/>");
+
+    document.write(Math.max.apply(Math, arr) + "<br/>");
+    document.write(Math.min.apply(Math, arr) + "<br/>");
+
+    for (var j = 0; j < arr.length; j++) {
+        sum = sum + arr[j];
+    }
+
+    document.write("sum = " + sum + "<br/>");
+    document.write("avg =" + sum / arr.length + "<br/>");
+
+    for (var x = 0; x < arr.length; x++) {
+        if (arr[x] < 0) {
+            document.write(arr[x].join(" ") + "<br/>");
+        }
+    }
+
+    document.write("<h2>Array 5x5</h2><br/>");
+
+    var array = new Array(5);
+
+    for (var k = 0; k < array.length; k++) {
+        array[k] = new Array(5);
+    }
+
+    for (var l = 0; l < array.length; l++) {
+        for (var o = 0; o < array.length; o++) {
+            array[l][o] = parseInt(Math.random() * 10 + 1);
+            if (i === o && array[l][o] < 0) {
+                array[l][o] = 0;
+            }else if(i === o && array[l][o] > 0){
+                array[l][o] = 1;
+            }
+        }
+    }
+
+    for(var row = 0; row < array.length; row++){
+        for(var column = 0; column < array.length; column++){
+            document.write(array[row][column] + " ");
+        }
+        document.write("<br/>");
+    }
+</script>
+</body>
+</html>
