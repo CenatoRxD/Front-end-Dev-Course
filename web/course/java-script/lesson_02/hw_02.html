@@ -84,10 +84,10 @@
     var a = +prompt("Enter first number");
     var b = +prompt("Enter second number");
 
-    for (var i = 0, k = 0; i < a; i++ , k++) {
+    for (var i = 0; i < a; i++) {
         for (var j = 0; j < 2 * b; j++) {
             if ((i === 0 && j === a) ||
-                ((i > 0 || i < a ) && (j === a - k) || (j === a + k)) || (i === a - 1 && j > 0)) {
+                ((i > 0 || i < a ) && (j === a - i) || (j === a + i)) || (i === a - 1 && j > 0)) {
                 document.write("*");
             } else {
                 document.write("&nbsp");
@@ -104,11 +104,11 @@
     var height = 2 * a;
     var width = 2 * b;
 
-    for (var i = 0, k = 0; i <= height; i++ , k++) {
+    for (var i = 0; i <= height; i++) {
         for (var j = 0; j <= width; j++) {
             if (i <= a) {
                 if ((i === 0 && j === a) ||
-                    ((i > 0 || i < a ) && ((j === a - k) || (j === a + k)))) {
+                    ((i > 0 || i < a ) && ((j === a - i) || (j === a + i)))) {
                     document.write("*");
                 } else {
                     document.write("&nbsp");
