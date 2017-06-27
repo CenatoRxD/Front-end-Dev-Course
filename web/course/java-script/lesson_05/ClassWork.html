@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var manager = {
+        name: "Sviatoslav",
+        surname: "Deichuk",
+        age: 23,
+
+        run: function () {
+            document.write(manager.name + " " + manager.surname + " " + manager.age + "<br/>");
+        }
+    };
+
+    var anotherManager = {};
+
+    anotherManager.name = "Sviatoslav";
+    anotherManager.surname = "Deichuk";
+    anotherManager.age = 23;
+    
+    anotherManager.show = function () {
+        document.write(anotherManager.name + " " + anotherManager.surname + " " + anotherManager.age + "<br/>");
+    };
+
+    manager.run();
+    anotherManager.show();
+</script>
+</body>
+</html>
