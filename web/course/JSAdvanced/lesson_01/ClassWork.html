@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Box(height, width, depth, materials) {
+        this.height = height;
+        this.width = width;
+        this.depth = depth;
+        this.materials = materials;
+    }
+
+    Box.prototype.equals = function (obj) {
+        return this.materials === obj.materials;
+    };
+
+    Box.prototype.getVolume = function () {
+        return this.height * this.width * this.depth;
+    };
+
+    var box1 = new Box(1, 1 ,1, "metal");
+    var box2 = new Box(1,1,1, "Wtoroy metal");
+    document.write(box1.getVolume() + "<br/>");
+
+    document.write(box1.equals(box2));
+</script>
+</body>
+</html>
