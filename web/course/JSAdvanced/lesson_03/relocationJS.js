@@ -6,5 +6,5 @@ window.onload = function () {
 };
 
 function relocate() {
-    document.location = "https://www.google.com/";
+    window.open("newWindow.html", "width=200,height=200");
 }
