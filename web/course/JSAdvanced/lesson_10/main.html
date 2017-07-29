@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            document.getElementById("getAll").onclick = function () {
+                var xhrFirst = new XMLHttpRequest();
+                var xhrSecond = new XMLHttpRequest();
+
+                xhrFirst.open("GET", "first.html");
+                xhrSecond.open("GET", "second.html");
+
+                xhrFirst.onreadystatechange = function () {
+                    if (xhrFirst.readyState === 4) {
+                        document.getElementById("output").innerHTML += xhrFirst.responseText;
+                    }
+                };
+                xhrFirst.send();
+
+                xhrSecond.onreadystatechange = function () {
+                    if (xhrSecond.readyState === 4) {
+                        document.getElementById("output").innerHTML += xhrSecond.responseText;
+                    }
+                };
+                xhrSecond.send();
+            }
+        };
+    </script>
+</head>
+<body>
+<input id="getAll" type="button" value="Get Content"/>
+<div id="output">
+
+</div>
+</body>
+</html>
