@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+            crossorigin="anonymous"></script>
+    <title>Title</title>
+
+    <script>
+        $(function () {
+
+            $('#submit').on("click", hide);
+
+            function hide() {
+                $("#main *").css("background-color", "yellow");
+                var a = $('#field').val();
+                $(a).css("color", "red");
+            };
+        });
+    </script>
+</head>
+<body>
+<input type="text" id="field" value="" />
+<input type="button" id="submit" value="Apply selector" />
+
+<div id="main" style="background-color: #20e710">
+    <p>Mama myla ramu</p>
+</div>
+</body>
+</html>

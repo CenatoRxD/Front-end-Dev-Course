@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+            crossorigin="anonymous"></script>
+
+    <script>
+        $(function () {
+
+            $("#btn").on("click", setStyle);
+
+            function setStyle() {
+                $(":header").css("border", "solid").
+                             css("border-color", "blue").
+                             css("color", "red").
+                             css("background-color", "yellow");
+            }
+        });
+    </script>
+
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">Select</button>
+
+<h1>Header1</h1>
+<div>
+    <h1>Header inside div</h1>
+    <div>
+        <p>
+        <h2>Header on third level</h2>
+        <h3>Another header on this level</h3>
+        </p>
+    </div>
+</div>
+</body>
+</html>
