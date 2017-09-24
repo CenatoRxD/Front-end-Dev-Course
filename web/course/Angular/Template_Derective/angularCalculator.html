@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Calculate">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="../../libraries/angular-1.6.5/angular.js"></script>
+
+    <title>Calculator</title>
+</head>
+<body ng-controller="CalculateCtrl">
+<div class="container">
+        <div class="form group row">
+            <label for="x" class="col-sm- col-form-label">X</label>
+            <div class="col-sm-2">
+                <input id="x" class="form-control-sm" ng-model="xVar">
+            </div>
+        </div>
+
+        <div class="form group row">
+            <label for="y" class="col-sm- col-form-label">Y</label>
+            <div class="col-sm-2">
+                <input id="y" class="form-control-sm" ng-model="yVar">
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button class="btn btn-outline-success" ng-click="add()">Add</button>
+            <button class="btn btn-outline-warning" ng-click="div()">Divide</button>
+            <button class="btn btn-outline-secondary" ng-click="multiple()">Multiply</button>
+            <button class="btn btn-outline-primary" ng-click="sub()">Subtract</button>
+        </div>
+        <div id="Result" class="row">
+
+
+        </div>
+</div>
+
+<script src="culcLogic.js"></script>
+</body>
+</html>
